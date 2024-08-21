@@ -8,9 +8,9 @@ const user = {
 }
 
 async function Image() {
-    const data = await fetch('http://localhost:8000/api/items/5/').then((res) =>
-        res.json()
-    )
+    const data = await fetch('http://localhost:8000/api/items/5/', {
+        cache: 'force-cache',
+    }).then((res) => res.json())
     return data
 }
 
